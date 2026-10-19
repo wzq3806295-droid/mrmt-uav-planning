@@ -1,0 +1,8 @@
+# Python 3.12 (tested with 3.12.4). Exact versions used for all results in results/.
+pymoo==0.6.2
+numpy==2.5.4
+scipy==1.18.1
+matplotlib==3.11.2
+numba==0.68.0       # AGE-MOEA-II baseline (pymoo)
+# only needed to re-select DEM windows from the GeoTIFF tiles (experiments/select_dem_windows.py)
+rasterio==1.5.2

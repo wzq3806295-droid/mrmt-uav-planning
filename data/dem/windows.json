@@ -1,0 +1,44 @@
+{
+  "qinling": {
+    "tile": "N33_00_E107_00",
+    "description": "Qinling Mountains, Shaanxi: ridges and river valleys",
+    "lon0": 107.18222,
+    "lat0": 33.46232,
+    "base_height": 634.1,
+    "relief": 1270.7,
+    "h_star": 456.3,
+    "straight_track_max": 1323.6,
+    "score": 867.3,
+    "windows_scanned": 2050,
+    "windows_in_relief_range": 1606,
+    "rule": "max(straight-track max - h*) over windows with relief in [300.0, 1500.0] m, corner stride 2.0 km"
+  },
+  "longmen": {
+    "tile": "N31_00_E103_00",
+    "description": "Longmen Shan, Sichuan: high-relief ridges and gorges",
+    "lon0": 103.7895,
+    "lat0": 31.19101,
+    "base_height": 946.5,
+    "relief": 1492.2,
+    "h_star": 618.6,
+    "straight_track_max": 1377.0,
+    "score": 758.4,
+    "windows_scanned": 2100,
+    "windows_in_relief_range": 103,
+    "rule": "max(straight-track max - h*) over windows with relief in [300.0, 1500.0] m, corner stride 2.0 km"
+  },
+  "zhemin": {
+    "tile": "N27_00_E118_00",
+    "description": "Zhejiang-Fujian hills: moderate relief",
+    "lon0": 118.67827,
+    "lat0": 27.87834,
+    "base_height": 261.1,
+    "relief": 1125.1,
+    "h_star": 414.9,
+    "straight_track_max": 1089.2,
+    "score": 674.3,
+    "windows_scanned": 2200,
+    "windows_in_relief_range": 2169,
+    "rule": "max(straight-track max - h*) over windows with relief in [300.0, 1500.0] m, corner stride 2.0 km"
+  }
+}

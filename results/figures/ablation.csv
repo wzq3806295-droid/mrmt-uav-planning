@@ -1,0 +1,281 @@
+instance,measure,method,run,hv
+ridge-hi/loose,final HV (2 × 2 ablation),FINE,0,0.9826
+ridge-hi/loose,final HV (2 × 2 ablation),FINE,1,1.0133
+ridge-hi/loose,final HV (2 × 2 ablation),FINE,2,0.9732
+ridge-hi/loose,final HV (2 × 2 ablation),FINE,3,0.918
+ridge-hi/loose,final HV (2 × 2 ablation),FINE,4,0.9924
+ridge-hi/loose,final HV (2 × 2 ablation),FINE,5,0.99
+ridge-hi/loose,final HV (2 × 2 ablation),FINE,6,0.6672
+ridge-hi/loose,final HV (2 × 2 ablation),FINE,7,1.0287
+ridge-hi/loose,final HV (2 × 2 ablation),FINE,8,0.5279
+ridge-hi/loose,final HV (2 × 2 ablation),FINE,9,1.0552
+ridge-hi/loose,final HV (2 × 2 ablation),FINE-RT,0,0.8685
+ridge-hi/loose,final HV (2 × 2 ablation),FINE-RT,1,0.8384
+ridge-hi/loose,final HV (2 × 2 ablation),FINE-RT,2,0.9994
+ridge-hi/loose,final HV (2 × 2 ablation),FINE-RT,3,0.6936
+ridge-hi/loose,final HV (2 × 2 ablation),FINE-RT,4,0.6248
+ridge-hi/loose,final HV (2 × 2 ablation),FINE-RT,5,1.0129
+ridge-hi/loose,final HV (2 × 2 ablation),FINE-RT,6,0.7773
+ridge-hi/loose,final HV (2 × 2 ablation),FINE-RT,7,0.6591
+ridge-hi/loose,final HV (2 × 2 ablation),FINE-RT,8,1.0105
+ridge-hi/loose,final HV (2 × 2 ablation),FINE-RT,9,0.8575
+ridge-hi/loose,final HV (2 × 2 ablation),MT,0,1.2111
+ridge-hi/loose,final HV (2 × 2 ablation),MT,1,1.206
+ridge-hi/loose,final HV (2 × 2 ablation),MT,2,1.2038
+ridge-hi/loose,final HV (2 × 2 ablation),MT,3,1.2109
+ridge-hi/loose,final HV (2 × 2 ablation),MT,4,1.2042
+ridge-hi/loose,final HV (2 × 2 ablation),MT,5,1.2069
+ridge-hi/loose,final HV (2 × 2 ablation),MT,6,1.2153
+ridge-hi/loose,final HV (2 × 2 ablation),MT,7,1.2103
+ridge-hi/loose,final HV (2 × 2 ablation),MT,8,1.2086
+ridge-hi/loose,final HV (2 × 2 ablation),MT,9,1.2131
+ridge-hi/loose,final HV (2 × 2 ablation),MT-R,0,1.2073
+ridge-hi/loose,final HV (2 × 2 ablation),MT-R,1,1.212
+ridge-hi/loose,final HV (2 × 2 ablation),MT-R,2,1.2133
+ridge-hi/loose,final HV (2 × 2 ablation),MT-R,3,1.2094
+ridge-hi/loose,final HV (2 × 2 ablation),MT-R,4,1.2095
+ridge-hi/loose,final HV (2 × 2 ablation),MT-R,5,1.212
+ridge-hi/loose,final HV (2 × 2 ablation),MT-R,6,1.206
+ridge-hi/loose,final HV (2 × 2 ablation),MT-R,7,1.2086
+ridge-hi/loose,final HV (2 × 2 ablation),MT-R,8,1.2053
+ridge-hi/loose,final HV (2 × 2 ablation),MT-R,9,1.2107
+maze4/none,final HV (2 × 2 ablation),FINE,0,0.8243
+maze4/none,final HV (2 × 2 ablation),FINE,1,0.8893
+maze4/none,final HV (2 × 2 ablation),FINE,2,0.507
+maze4/none,final HV (2 × 2 ablation),FINE,3,0.917
+maze4/none,final HV (2 × 2 ablation),FINE,4,0.4085
+maze4/none,final HV (2 × 2 ablation),FINE,5,0.4537
+maze4/none,final HV (2 × 2 ablation),FINE,6,0.8736
+maze4/none,final HV (2 × 2 ablation),FINE,7,0.63
+maze4/none,final HV (2 × 2 ablation),FINE,8,0.6421
+maze4/none,final HV (2 × 2 ablation),FINE,9,0.753
+maze4/none,final HV (2 × 2 ablation),FINE-RT,0,0.4085
+maze4/none,final HV (2 × 2 ablation),FINE-RT,1,0.6502
+maze4/none,final HV (2 × 2 ablation),FINE-RT,2,0.8263
+maze4/none,final HV (2 × 2 ablation),FINE-RT,3,0.5027
+maze4/none,final HV (2 × 2 ablation),FINE-RT,4,0.5771
+maze4/none,final HV (2 × 2 ablation),FINE-RT,5,0.8404
+maze4/none,final HV (2 × 2 ablation),FINE-RT,6,0.7457
+maze4/none,final HV (2 × 2 ablation),FINE-RT,7,0.7576
+maze4/none,final HV (2 × 2 ablation),FINE-RT,8,0.4908
+maze4/none,final HV (2 × 2 ablation),FINE-RT,9,0.7117
+maze4/none,final HV (2 × 2 ablation),MT,0,0.9806
+maze4/none,final HV (2 × 2 ablation),MT,1,0.9895
+maze4/none,final HV (2 × 2 ablation),MT,2,0.9821
+maze4/none,final HV (2 × 2 ablation),MT,3,1.0076
+maze4/none,final HV (2 × 2 ablation),MT,4,0.9592
+maze4/none,final HV (2 × 2 ablation),MT,5,0.9943
+maze4/none,final HV (2 × 2 ablation),MT,6,0.9787
+maze4/none,final HV (2 × 2 ablation),MT,7,0.94
+maze4/none,final HV (2 × 2 ablation),MT,8,0.9105
+maze4/none,final HV (2 × 2 ablation),MT,9,0.9872
+maze4/none,final HV (2 × 2 ablation),MT-R,0,0.9382
+maze4/none,final HV (2 × 2 ablation),MT-R,1,0.9375
+maze4/none,final HV (2 × 2 ablation),MT-R,2,0.9642
+maze4/none,final HV (2 × 2 ablation),MT-R,3,0.9672
+maze4/none,final HV (2 × 2 ablation),MT-R,4,0.9503
+maze4/none,final HV (2 × 2 ablation),MT-R,5,0.9843
+maze4/none,final HV (2 × 2 ablation),MT-R,6,0.9442
+maze4/none,final HV (2 × 2 ablation),MT-R,7,0.9177
+maze4/none,final HV (2 × 2 ablation),MT-R,8,0.9587
+maze4/none,final HV (2 × 2 ablation),MT-R,9,0.938
+maze6/loose,final HV (2 × 2 ablation),FINE,0,0.4831
+maze6/loose,final HV (2 × 2 ablation),FINE,1,0.0
+maze6/loose,final HV (2 × 2 ablation),FINE,2,0.2027
+maze6/loose,final HV (2 × 2 ablation),FINE,3,0.2891
+maze6/loose,final HV (2 × 2 ablation),FINE,4,0.4744
+maze6/loose,final HV (2 × 2 ablation),FINE,5,0.0
+maze6/loose,final HV (2 × 2 ablation),FINE,6,0.1405
+maze6/loose,final HV (2 × 2 ablation),FINE,7,0.3533
+maze6/loose,final HV (2 × 2 ablation),FINE,8,0.0
+maze6/loose,final HV (2 × 2 ablation),FINE,9,0.4393
+maze6/loose,final HV (2 × 2 ablation),FINE-RT,0,0.5226
+maze6/loose,final HV (2 × 2 ablation),FINE-RT,1,0.5271
+maze6/loose,final HV (2 × 2 ablation),FINE-RT,2,0.4905
+maze6/loose,final HV (2 × 2 ablation),FINE-RT,3,0.4549
+maze6/loose,final HV (2 × 2 ablation),FINE-RT,4,0.5433
+maze6/loose,final HV (2 × 2 ablation),FINE-RT,5,0.4337
+maze6/loose,final HV (2 × 2 ablation),FINE-RT,6,0.4512
+maze6/loose,final HV (2 × 2 ablation),FINE-RT,7,0.394
+maze6/loose,final HV (2 × 2 ablation),FINE-RT,8,0.417
+maze6/loose,final HV (2 × 2 ablation),FINE-RT,9,0.4732
+maze6/loose,final HV (2 × 2 ablation),MT,0,0.0
+maze6/loose,final HV (2 × 2 ablation),MT,1,0.3787
+maze6/loose,final HV (2 × 2 ablation),MT,2,0.0
+maze6/loose,final HV (2 × 2 ablation),MT,3,0.0
+maze6/loose,final HV (2 × 2 ablation),MT,4,0.0
+maze6/loose,final HV (2 × 2 ablation),MT,5,0.0
+maze6/loose,final HV (2 × 2 ablation),MT,6,0.0073
+maze6/loose,final HV (2 × 2 ablation),MT,7,0.0
+maze6/loose,final HV (2 × 2 ablation),MT,8,0.4597
+maze6/loose,final HV (2 × 2 ablation),MT,9,0.1934
+maze6/loose,final HV (2 × 2 ablation),MT-R,0,0.519
+maze6/loose,final HV (2 × 2 ablation),MT-R,1,0.4256
+maze6/loose,final HV (2 × 2 ablation),MT-R,2,0.5175
+maze6/loose,final HV (2 × 2 ablation),MT-R,3,0.4471
+maze6/loose,final HV (2 × 2 ablation),MT-R,4,0.5516
+maze6/loose,final HV (2 × 2 ablation),MT-R,5,0.5863
+maze6/loose,final HV (2 × 2 ablation),MT-R,6,0.3905
+maze6/loose,final HV (2 × 2 ablation),MT-R,7,0.3858
+maze6/loose,final HV (2 × 2 ablation),MT-R,8,0.4999
+maze6/loose,final HV (2 × 2 ablation),MT-R,9,0.4308
+maze6/tight,final HV (2 × 2 ablation),FINE,0,0.2889
+maze6/tight,final HV (2 × 2 ablation),FINE,1,0.3482
+maze6/tight,final HV (2 × 2 ablation),FINE,2,0.0
+maze6/tight,final HV (2 × 2 ablation),FINE,3,0.8516
+maze6/tight,final HV (2 × 2 ablation),FINE,4,0.6069
+maze6/tight,final HV (2 × 2 ablation),FINE,5,0.0
+maze6/tight,final HV (2 × 2 ablation),FINE,6,0.5335
+maze6/tight,final HV (2 × 2 ablation),FINE,7,0.7105
+maze6/tight,final HV (2 × 2 ablation),FINE,8,0.0
+maze6/tight,final HV (2 × 2 ablation),FINE,9,0.7425
+maze6/tight,final HV (2 × 2 ablation),FINE-RT,0,0.7188
+maze6/tight,final HV (2 × 2 ablation),FINE-RT,1,0.6601
+maze6/tight,final HV (2 × 2 ablation),FINE-RT,2,0.6765
+maze6/tight,final HV (2 × 2 ablation),FINE-RT,3,0.6703
+maze6/tight,final HV (2 × 2 ablation),FINE-RT,4,0.6813
+maze6/tight,final HV (2 × 2 ablation),FINE-RT,5,0.0
+maze6/tight,final HV (2 × 2 ablation),FINE-RT,6,0.8495
+maze6/tight,final HV (2 × 2 ablation),FINE-RT,7,0.8099
+maze6/tight,final HV (2 × 2 ablation),FINE-RT,8,0.6175
+maze6/tight,final HV (2 × 2 ablation),FINE-RT,9,0.7898
+maze6/tight,final HV (2 × 2 ablation),MT,0,0.0
+maze6/tight,final HV (2 × 2 ablation),MT,1,0.7671
+maze6/tight,final HV (2 × 2 ablation),MT,2,0.7827
+maze6/tight,final HV (2 × 2 ablation),MT,3,0.6008
+maze6/tight,final HV (2 × 2 ablation),MT,4,0.0
+maze6/tight,final HV (2 × 2 ablation),MT,5,0.0
+maze6/tight,final HV (2 × 2 ablation),MT,6,0.7859
+maze6/tight,final HV (2 × 2 ablation),MT,7,0.6688
+maze6/tight,final HV (2 × 2 ablation),MT,8,0.6491
+maze6/tight,final HV (2 × 2 ablation),MT,9,0.7231
+maze6/tight,final HV (2 × 2 ablation),MT-R,0,0.3277
+maze6/tight,final HV (2 × 2 ablation),MT-R,1,0.6217
+maze6/tight,final HV (2 × 2 ablation),MT-R,2,0.6788
+maze6/tight,final HV (2 × 2 ablation),MT-R,3,0.0
+maze6/tight,final HV (2 × 2 ablation),MT-R,4,0.6878
+maze6/tight,final HV (2 × 2 ablation),MT-R,5,0.6013
+maze6/tight,final HV (2 × 2 ablation),MT-R,6,0.676
+maze6/tight,final HV (2 × 2 ablation),MT-R,7,0.534
+maze6/tight,final HV (2 × 2 ablation),MT-R,8,0.7685
+maze6/tight,final HV (2 × 2 ablation),MT-R,9,0.5434
+ridge/loose,HV at 25 % budget (lift ablation),MT,0,1.1278
+ridge/loose,HV at 25 % budget (lift ablation),MT,1,1.1394
+ridge/loose,HV at 25 % budget (lift ablation),MT,2,1.1369
+ridge/loose,HV at 25 % budget (lift ablation),MT,3,1.1308
+ridge/loose,HV at 25 % budget (lift ablation),MT,4,1.1281
+ridge/loose,HV at 25 % budget (lift ablation),MT,5,1.1425
+ridge/loose,HV at 25 % budget (lift ablation),MT,6,1.1348
+ridge/loose,HV at 25 % budget (lift ablation),MT,7,1.1344
+ridge/loose,HV at 25 % budget (lift ablation),MT,8,1.1331
+ridge/loose,HV at 25 % budget (lift ablation),MT,9,1.1401
+ridge/loose,HV at 25 % budget (lift ablation),MT-NE,0,1.0914
+ridge/loose,HV at 25 % budget (lift ablation),MT-NE,1,1.1057
+ridge/loose,HV at 25 % budget (lift ablation),MT-NE,2,1.1008
+ridge/loose,HV at 25 % budget (lift ablation),MT-NE,3,1.1268
+ridge/loose,HV at 25 % budget (lift ablation),MT-NE,4,1.1293
+ridge/loose,HV at 25 % budget (lift ablation),MT-NE,5,1.1066
+ridge/loose,HV at 25 % budget (lift ablation),MT-NE,6,1.123
+ridge/loose,HV at 25 % budget (lift ablation),MT-NE,7,1.1126
+ridge/loose,HV at 25 % budget (lift ablation),MT-NE,8,1.1213
+ridge/loose,HV at 25 % budget (lift ablation),MT-NE,9,1.1279
+ridge/loose,HV at 25 % budget (lift ablation),MT-NN,0,1.1055
+ridge/loose,HV at 25 % budget (lift ablation),MT-NN,1,1.0777
+ridge/loose,HV at 25 % budget (lift ablation),MT-NN,2,1.1204
+ridge/loose,HV at 25 % budget (lift ablation),MT-NN,3,1.115
+ridge/loose,HV at 25 % budget (lift ablation),MT-NN,4,1.1296
+ridge/loose,HV at 25 % budget (lift ablation),MT-NN,5,1.0863
+ridge/loose,HV at 25 % budget (lift ablation),MT-NN,6,1.1258
+ridge/loose,HV at 25 % budget (lift ablation),MT-NN,7,1.1218
+ridge/loose,HV at 25 % budget (lift ablation),MT-NN,8,1.1116
+ridge/loose,HV at 25 % budget (lift ablation),MT-NN,9,1.1242
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT,0,1.1797
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT,1,1.1048
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT,2,1.1388
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT,3,1.1638
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT,4,1.1696
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT,5,1.1802
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT,6,1.1589
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT,7,1.1437
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT,8,1.1637
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT,9,1.1805
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NE,0,1.0702
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NE,1,1.1158
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NE,2,1.1028
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NE,3,1.129
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NE,4,1.1395
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NE,5,1.083
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NE,6,1.0108
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NE,7,1.1143
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NE,8,1.149
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NE,9,1.0955
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NN,0,1.0848
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NN,1,0.906
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NN,2,1.0034
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NN,3,0.6362
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NN,4,0.9036
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NN,5,0.9703
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NN,6,0.9417
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NN,7,1.117
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NN,8,0.936
+ridge-hi/loose,HV at 25 % budget (lift ablation),MT-NN,9,1.0465
+maze4/none,HV at 25 % budget (lift ablation),MT,0,0.9083
+maze4/none,HV at 25 % budget (lift ablation),MT,1,0.9509
+maze4/none,HV at 25 % budget (lift ablation),MT,2,0.9289
+maze4/none,HV at 25 % budget (lift ablation),MT,3,0.9389
+maze4/none,HV at 25 % budget (lift ablation),MT,4,0.9206
+maze4/none,HV at 25 % budget (lift ablation),MT,5,0.917
+maze4/none,HV at 25 % budget (lift ablation),MT,6,0.926
+maze4/none,HV at 25 % budget (lift ablation),MT,7,0.9154
+maze4/none,HV at 25 % budget (lift ablation),MT,8,0.8266
+maze4/none,HV at 25 % budget (lift ablation),MT,9,0.8195
+maze4/none,HV at 25 % budget (lift ablation),MT-NE,0,0.8712
+maze4/none,HV at 25 % budget (lift ablation),MT-NE,1,0.8955
+maze4/none,HV at 25 % budget (lift ablation),MT-NE,2,0.9186
+maze4/none,HV at 25 % budget (lift ablation),MT-NE,3,0.8321
+maze4/none,HV at 25 % budget (lift ablation),MT-NE,4,0.7958
+maze4/none,HV at 25 % budget (lift ablation),MT-NE,5,0.8469
+maze4/none,HV at 25 % budget (lift ablation),MT-NE,6,0.9116
+maze4/none,HV at 25 % budget (lift ablation),MT-NE,7,0.8878
+maze4/none,HV at 25 % budget (lift ablation),MT-NE,8,0.7654
+maze4/none,HV at 25 % budget (lift ablation),MT-NE,9,0.7211
+maze4/none,HV at 25 % budget (lift ablation),MT-NN,0,0.8589
+maze4/none,HV at 25 % budget (lift ablation),MT-NN,1,0.8601
+maze4/none,HV at 25 % budget (lift ablation),MT-NN,2,0.7264
+maze4/none,HV at 25 % budget (lift ablation),MT-NN,3,0.8138
+maze4/none,HV at 25 % budget (lift ablation),MT-NN,4,0.8612
+maze4/none,HV at 25 % budget (lift ablation),MT-NN,5,0.8081
+maze4/none,HV at 25 % budget (lift ablation),MT-NN,6,0.784
+maze4/none,HV at 25 % budget (lift ablation),MT-NN,7,0.798
+maze4/none,HV at 25 % budget (lift ablation),MT-NN,8,0.7529
+maze4/none,HV at 25 % budget (lift ablation),MT-NN,9,0.8818
+maze6/none,HV at 25 % budget (lift ablation),MT,0,1.0148
+maze6/none,HV at 25 % budget (lift ablation),MT,1,1.1163
+maze6/none,HV at 25 % budget (lift ablation),MT,2,1.0786
+maze6/none,HV at 25 % budget (lift ablation),MT,3,1.0538
+maze6/none,HV at 25 % budget (lift ablation),MT,4,1.0119
+maze6/none,HV at 25 % budget (lift ablation),MT,5,1.1437
+maze6/none,HV at 25 % budget (lift ablation),MT,6,1.0742
+maze6/none,HV at 25 % budget (lift ablation),MT,7,1.1255
+maze6/none,HV at 25 % budget (lift ablation),MT,8,1.0005
+maze6/none,HV at 25 % budget (lift ablation),MT,9,1.1105
+maze6/none,HV at 25 % budget (lift ablation),MT-NE,0,0.9
+maze6/none,HV at 25 % budget (lift ablation),MT-NE,1,1.0956
+maze6/none,HV at 25 % budget (lift ablation),MT-NE,2,0.963
+maze6/none,HV at 25 % budget (lift ablation),MT-NE,3,1.0298
+maze6/none,HV at 25 % budget (lift ablation),MT-NE,4,0.9174
+maze6/none,HV at 25 % budget (lift ablation),MT-NE,5,1.0932
+maze6/none,HV at 25 % budget (lift ablation),MT-NE,6,1.0404
+maze6/none,HV at 25 % budget (lift ablation),MT-NE,7,1.0617
+maze6/none,HV at 25 % budget (lift ablation),MT-NE,8,1.0072
+maze6/none,HV at 25 % budget (lift ablation),MT-NE,9,1.0419
+maze6/none,HV at 25 % budget (lift ablation),MT-NN,0,0.9398
+maze6/none,HV at 25 % budget (lift ablation),MT-NN,1,0.8915
+maze6/none,HV at 25 % budget (lift ablation),MT-NN,2,0.937
+maze6/none,HV at 25 % budget (lift ablation),MT-NN,3,0.9794
+maze6/none,HV at 25 % budget (lift ablation),MT-NN,4,1.0387
+maze6/none,HV at 25 % budget (lift ablation),MT-NN,5,0.9127
+maze6/none,HV at 25 % budget (lift ablation),MT-NN,6,0.9318
+maze6/none,HV at 25 % budget (lift ablation),MT-NN,7,1.0297
+maze6/none,HV at 25 % budget (lift ablation),MT-NN,8,0.9809
+maze6/none,HV at 25 % budget (lift ablation),MT-NN,9,1.079
