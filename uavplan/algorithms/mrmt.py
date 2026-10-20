@@ -118,7 +118,8 @@ class MRMT:
     def __init__(self, env, budget, mt=True, ca=True, adapt=True, repair_fine=False,
                  z_ceil=None, levels=(4, 8, 16), N=100, Nc=50, seed=1, record_every=2000,
                  x0=None, max_repair=20, feas_trigger=None, share_eval=True,
-                 repair_patience=None, repair_cooldown=20, repair_cap=None):
+                 repair_patience=None, repair_cooldown=20, repair_cap=None,
+                 p_min=0.08, decay=0.7):
         """mt: concurrent coarse tasks; ca: constraint-aware transfer (repair lifted
         coarse offspring w.r.t. the ceiling before they enter the fine population);
         adapt: credit-based allocation; repair_fine: also repair the fine GA offspring
@@ -143,7 +144,11 @@ class MRMT:
           34 000 constraint checks / 1 350 s per run and flooding the population with
           repaired-but-still-infeasible paths.
         repair_cap: hard cap on the repair constraint checks of a run, as a fraction of the
-          evaluation budget (e.g. 0.10), so the repair cost is bounded and reportable."""
+          evaluation budget (e.g. 0.10), so the repair cost is bounded and reportable.
+        p_min, decay: offspring quota of each arm = p_min + (1 - p_min * n_arms) x its share
+          of the running survival rates; the rates are smoothed as q <- decay q + (1 - decay)
+          rate (parameter sensitivity study: experiments/compare.py, SENS_VARIANTS)."""
+        self.p_min, self.decay = p_min, decay
         self.rng = np.random.default_rng(seed)
         self.x0 = x0                     # optional initial fine population
         self.budget, self.mt, self.ca, self.adapt = budget, mt, ca, adapt
@@ -268,7 +273,7 @@ class MRMT:
         # credit: arms = fine GA + one arm per coarse task
         arms = ["GA"] + [f"T{m}" for m in self.levels[:-1]]
         q = np.ones(len(arms)) / len(arms)          # running success rates
-        p_min, decay = 0.08, 0.7
+        p_min, decay = self.p_min, self.decay
         self.arm_log = []
         while self.n_eval < self.budget:
             p = (q / q.sum()) * (1 - p_min * len(arms)) + p_min if self.adapt \

@@ -108,6 +108,28 @@ PAPER_VARIANTS = SYNTH_VARIANTS                             # union of both sets
 # AGEMOEA2 is implemented but not in the default sets (recent baselines are covered by
 # CCMO and EMCMO); run it with --variants AGEMOEA2 if a reviewer asks for it.
 LIFT_ABLATION = ["FINE", "MT", "MT-NE", "MT-NN"]
+
+# Parameter sensitivity of MT-R (12 synthetic instances; one parameter changed at a time,
+# everything else as MT-R). Run with --variants SENS --group synthetic --out results/suite_sens
+# so that the main results (and the HV normalisation of the paper tables) are untouched;
+# MT-R itself is read from results/suite_arc by analysis/sensitivity.py.
+_MTR = VARIANTS["MT-R"]
+SENS = {
+    "MT-R-L816": dict(levels=(8, 16)),           # resolutions: drop the coarsest task
+    "MT-R-L416": dict(levels=(4, 16)),           #   drop the middle task
+    "MT-R-L2": dict(levels=(2, 4, 8, 16)),       #   add an even coarser task
+    "MT-R-UNI": dict(adapt=False),               # quota: uniform instead of adaptive
+    "MT-R-P04": dict(p_min=0.04),                #   lower bound per arm (default 0.08)
+    "MT-R-P16": dict(p_min=0.16),
+    "MT-R-D05": dict(decay=0.5),                 #   smoothing factor (default 0.7)
+    "MT-R-D09": dict(decay=0.9),
+    "MT-R-T25": dict(feas_trigger=0.25),         # repair trigger (default 0.5)
+    "MT-R-T75": dict(feas_trigger=0.75),
+    "MT-R-K10": dict(max_repair=10),             # repairs per generation (default 20)
+    "MT-R-K40": dict(max_repair=40),
+}
+VARIANTS.update({k: {**_MTR, **v} for k, v in SENS.items()})
+SENS_VARIANTS = list(SENS)
 DEFAULT_VARIANTS = ["FINE", "FINE-R", "C2F", "MT", "MT-CA"]
 MAX_REPAIR = 20
 OUT = os.environ.get("SUITE_OUT", "results/suite")
@@ -143,7 +165,7 @@ def run_variant(ins, var, r, budget):
     if isinstance(spec, str):
         alg = run_c2f(env, budget, ins["ceil"], seed, repair=spec == "c2f-r")
     else:
-        alg = MRMT(env, budget, z_ceil=ins["ceil"], seed=seed, max_repair=MAX_REPAIR, **spec)
+        alg = MRMT(env, budget, z_ceil=ins["ceil"], seed=seed, **{"max_repair": MAX_REPAIR, **spec})
         alg.run()
     pop = alg.pops[alg.fine.m]
     return alg, pop.X, pop.F
@@ -208,10 +230,19 @@ if __name__ == "__main__":
     ap.add_argument("--rebuild", action="store_true",
                     help="run nothing; rebuild the per-instance files from scratch out of the "
                          "per-run files (variants not listed are dropped from the files)")
+    ap.add_argument("--out", default=None,
+                    help="result folder (default results/suite_arc); the parameter sensitivity "
+                         "study uses results/suite_sens")
     a = ap.parse_args()
     mrp.set_eval_mode(a.eval)
-    if a.eval == "arc" and "SUITE_OUT" not in os.environ:
+    if a.out is not None:
+        OUT = a.out
+    elif a.eval == "arc" and "SUITE_OUT" not in os.environ:
         OUT = "results/suite_arc"           # keep the arc results apart from the legacy ones
+    if a.variants == ["SENS"]:
+        a.variants = SENS_VARIANTS
+    if a.variants and set(a.variants) & set(SENS_VARIANTS) and os.path.normpath(OUT) == os.path.normpath("results/suite_arc"):
+        raise SystemExit("sensitivity variants belong in their own folder: add --out results/suite_sens")
     rebuild_all = a.rebuild and a.variants is None
     if a.variants is None:
         a.variants = list(VARIANTS) if a.rebuild else None

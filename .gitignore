@@ -7,6 +7,7 @@ __pycache__/
 # large data: original Copernicus tiles (download, see README) and raw runs (GitHub Release)
 data/dem/*.tif
 results/suite_arc/
+results/suite_sens/
 dist/
 
 # logs of background runs

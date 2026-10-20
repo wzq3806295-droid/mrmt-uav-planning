@@ -107,6 +107,15 @@ Analysis, tables and figures:
 
 `--group` is `all` (21 instances), `synthetic` (12) or `dem` (9).
 
+Parameter sensitivity of MT-R (12 settings, one parameter changed at a time, 12 synthetic
+instances x 10 runs = 1440 runs; written to a separate folder so that the main results are
+untouched; MT-R itself is read from `results/suite_arc`):
+
+```bash
+.venv/Scripts/python.exe experiments/compare.py --variants SENS --group synthetic --out results/suite_sens
+.venv/Scripts/python.exe analysis/sensitivity.py      # -> results/sensitivity.md
+```
+
 ## Terrain data
 
 The real-terrain instances use three 10 km windows of the Copernicus DEM GLO-30
