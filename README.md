@@ -107,6 +107,17 @@ Analysis, tables and figures:
 
 `--group` is `all` (21 instances), `synthetic` (12) or `dem` (9).
 
+Further tables of the paper (from the same results):
+
+```bash
+.venv/Scripts/python.exe analysis/make_tables.py      # HV, W/T/L, ablation, timing tables
+.venv/Scripts/python.exe analysis/igd_plus.py         # IGD+ (-> results/igd_plus.md)
+.venv/Scripts/python.exe analysis/repair_quota.py     # repair cost, final quota (-> results/repair_quota.md)
+.venv/Scripts/python.exe experiments/select_dem_windows.py --plot-only   # DEM window figure
+```
+
+The table scripts also write LaTeX tables to `paper/drones/tables/` (created if missing).
+
 Parameter sensitivity of MT-R (12 settings, one parameter changed at a time, 12 synthetic
 instances x 10 runs = 1440 runs; written to a separate folder so that the main results are
 untouched; MT-R itself is read from `results/suite_arc`):

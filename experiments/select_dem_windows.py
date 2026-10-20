@@ -3,7 +3,8 @@
 Needs the GeoTIFF tiles in data/dem/ and rasterio. Writes
   data/dem/<region>.npz        absolute heights of the chosen window (101 x 101)
   data/dem/windows.json        chosen windows (corner, relief, h*, score) + the rule
-  results/figures/dem_windows.png   overview: terrain, corridor, start/goal, threats
+  results/figures/dem_windows.pdf/.png   overview: terrain, corridor, start/goal, threats
+(--plot-only redraws the figure from data/dem without the tiles)
 After this the DEM instances (dem-<region>/none|loose|tight) are part of the suite.
 
 Usage:  .venv/Scripts/python.exe experiments/select_dem_windows.py [--stride 2]
@@ -28,8 +29,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--stride", type=float, default=2.0, help="window corner spacing [km]")
     ap.add_argument("--regions", nargs="*", default=list(dem.REGIONS))
+    ap.add_argument("--plot-only", action="store_true",
+                    help="only redraw the overview figure from data/dem (no tiles / rasterio needed)")
     a = ap.parse_args()
     sel = json.load(open(dem.WINDOWS_JSON)) if os.path.exists(dem.WINDOWS_JSON) else {}
+    if a.plot_only:
+        plot(sel)
+        return
     for region in a.regions:
         tile, desc = dem.REGIONS[region]
         if not os.path.exists(dem.tile_path(tile)):
@@ -62,7 +68,12 @@ def main():
     plot(sel)
 
 
+NAMES = {"qinling": "Qinling Mountains", "longmen": "Longmen Shan", "zhemin": "Zhejiang-Fujian hills"}
+
+
 def plot(sel):
+    """Overview of the selected windows -> results/figures/dem_windows.pdf (vector, for the
+    paper) and .png."""
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -70,30 +81,35 @@ def plot(sel):
     regions = [r for r in dem.REGIONS if r in sel]
     if not regions:
         return
-    fig, axes = plt.subplots(1, len(regions), figsize=(5.2 * len(regions), 4.8), squeeze=False)
+    plt.rcParams.update({"font.size": 8, "axes.titlesize": 8, "axes.labelsize": 8,
+                         "xtick.labelsize": 7, "ytick.labelsize": 7})
+    fig, axes = plt.subplots(1, len(regions), figsize=(2.45 * len(regions), 2.55), squeeze=False)
     for ax, r in zip(axes[0], regions):
         env = dem.load_environment(r)
         xs = np.linspace(0, env.size, env.n) / 1000
         cs = ax.contourf(xs, xs, env.H.T, 20, cmap="terrain")
-        fig.colorbar(cs, ax=ax, label="relative height [m]")
+        cb = fig.colorbar(cs, ax=ax, fraction=0.046, pad=0.03)
+        cb.ax.tick_params(labelsize=6)
+        cb.set_label("relative height [m]", fontsize=7)
         d = (env.goal - env.start) / np.linalg.norm(env.goal - env.start)
         perp = np.array([-d[1], d[0]])
         for sgn in (-1, 1):                                       # corridor edges
             p0, p1 = env.start + sgn * 3500 * perp, env.goal + sgn * 3500 * perp
             ax.plot([p0[0] / 1000, p1[0] / 1000], [p0[1] / 1000, p1[1] / 1000], "w--", lw=0.8)
         for (cx, cy), R in zip(env.threats, env.threat_R):
-            ax.add_patch(plt.Circle((cx / 1000, cy / 1000), R / 1000, fill=False, ec="red", ls="--"))
-        ax.plot(*(env.start / 1000), "k^", ms=9)
-        ax.plot(*(env.goal / 1000), "k*", ms=12)
+            ax.add_patch(plt.Circle((cx / 1000, cy / 1000), R / 1000, fill=False, ec="red", ls="--", lw=0.8))
+        ax.plot(*(env.start / 1000), "k^", ms=6)
+        ax.plot(*(env.goal / 1000), "k*", ms=8)
         s = sel[r]
-        ax.set(title=f"{r}: {s['lon0']:.3f}E {s['lat0']:.3f}N\nrelief {s['relief']:.0f} m, "
-                     f"h* {s['h_star']:.0f} m", xlabel="x [km]", ylabel="y [km]",
-               xlim=(0, 10), ylim=(0, 10))
+        ax.set(title=f"{NAMES.get(r, r)} ({s['lon0']:.2f}E, {s['lat0']:.2f}N)\n"
+                     f"relief {s['relief']:.0f} m, $h^*$ {s['h_star']:.0f} m",
+               xlabel="x [km]", ylabel="y [km]", xlim=(0, 10), ylim=(0, 10))
         ax.set_aspect("equal")
     fig.tight_layout()
     os.makedirs("results/figures", exist_ok=True)
-    fig.savefig("results/figures/dem_windows.png", dpi=120)
-    print("figure: results/figures/dem_windows.png")
+    for ext in ("pdf", "png"):
+        fig.savefig(f"results/figures/dem_windows.{ext}", dpi=200)
+    print("figure: results/figures/dem_windows.pdf / .png")
 
 
 if __name__ == "__main__":
